@@ -3,8 +3,8 @@ Contributors: lirik
 Donate link: https://buymeacoffee.com/design_ninja
 Tags: social, buttons, floating, widget
 Requires at least: 5.0
-Tested up to: 6.2
-Stable tag: 0.1
+Tested up to: 6.5
+Stable tag: 0.2
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

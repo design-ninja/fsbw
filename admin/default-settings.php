@@ -4,10 +4,11 @@ if (!defined('ABSPATH')) {
     exit; // Protect from direct access
 }
 
-class FSBW_Default_Settings {
-    public function get_default_settings() {
+class FSBW_Default_Settings
+{
+    public function get_default_settings()
+    {
         return array(
-            'fsbw_active' => 1,
             'fsbw_display' => 'sitewide',
             'fsbw_position' => 'bottom_right',
             'fsbw_style' => 'circle',

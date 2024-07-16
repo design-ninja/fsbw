@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     $('.color-picker').wpColorPicker();
 
-    $('#fsbw_style').on('change', function() {
+    $('#fsbw_style').on('change', function () {
         var borderRadiusField = $('#fsbw_border_radius');
         if (this.value == 'rounded') {
             borderRadiusField.show();
@@ -15,6 +15,13 @@ jQuery(document).ready(function ($) {
     } else {
         $('#fsbw_border_radius').hide();
     }
+
+    // Reset main icon
+    $('#reset_main_icon').on('click', function (e) {
+        e.preventDefault();
+        var defaultIcon = $(this).data('default-icon');
+        $('#fsbw_main_icon').val(defaultIcon);
+    });
 
     // Remove button action
     function updateRemoveButtons() {

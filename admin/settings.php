@@ -8,8 +8,10 @@ require_once 'general-settings.php';
 require_once 'buttons-settings.php';
 require_once 'default-settings.php';
 
-class FSBW_Admin_Settings {
-    public function add_admin_menu() {
+class FSBW_Admin_Settings
+{
+    public function add_admin_menu()
+    {
         add_menu_page(
             'Floating Social Buttons Widget',
             'FSBw',
@@ -20,20 +22,23 @@ class FSBW_Admin_Settings {
         );
     }
 
-    public function register_settings() {
+    public function register_settings()
+    {
         register_setting('floating_buttons_widget_group', 'fsbw_settings');
     }
 
-    private function get_settings() {
+    private function get_settings()
+    {
         $defaults = (new FSBW_Default_Settings())->get_default_settings();
         $options = get_option('fsbw_settings', array());
         return wp_parse_args($options, $defaults);
     }
 
-    public function create_admin_page() {
+    public function create_admin_page()
+    {
         $plugin_data = get_file_data(plugin_dir_path(__FILE__) . '../fsbw.php', array('Version' => 'Version'));
         $this->version = $plugin_data['Version'];
-        ?>
+?>
         <div class="fsbw">
             <div class="wrap">
                 <div class="title-bar">
@@ -55,6 +60,6 @@ class FSBW_Admin_Settings {
                 </span>
             </div>
         </div>
-        <?php
+<?php
     }
 }
